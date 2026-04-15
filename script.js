@@ -1,4 +1,3 @@
-// LIRIOS CAYENDO
 function crearLirio() {
     const lirio = document.createElement("img");
     lirio.src = "lirio.png";
@@ -16,7 +15,7 @@ function crearLirio() {
 
 setInterval(crearLirio, 800);
 
-// FORZAR MUSICA (por si el navegador bloquea)
+// activar música si navegador bloquea
 document.addEventListener("click", () => {
     const musica = document.getElementById("musica");
     if (musica) musica.play();
