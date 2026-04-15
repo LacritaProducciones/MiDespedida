@@ -30,8 +30,22 @@ body {
 /* CONTENEDOR */
 .wrapper {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 40px;
     padding: 40px;
+}
+
+/* VIDEOS */
+.videos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.videos video {
+    width: 180px;
+    border-radius: 10px;
 }
 
 /* CARTA */
@@ -77,9 +91,9 @@ body {
 
 .polaroid img {
     width: 100%;
+    display: block;
 }
 
-/* POSICIONES */
 .img1 { top: 0; left: 50px; transform: rotate(-10deg); }
 .img2 { top: 150px; left: 0; transform: rotate(8deg); }
 .img3 { top: 220px; left: 120px; transform: rotate(-5deg); }
@@ -87,9 +101,9 @@ body {
 /* VINILO */
 .vinilo {
     position: absolute;
-    width: 120px;
-    bottom: 0;
-    right: 20px;
+    width: 100px;
+    bottom: -10px;
+    right: 10px;
     animation: girar 4s linear infinite;
 }
 
@@ -98,11 +112,14 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* VIDEOS */
-.videos video {
-    width: 200px;
-    margin-bottom: 10px;
+/* ESTRELLAS (CORREGIDO SOLO ESTO) */
+.estrella {
+    position: absolute;
+    width: 25px;
 }
+
+.estrella1 { top: 20px; right: 20px; }
+.estrella2 { bottom: 20px; left: 10px; }
 
 /* LIRIOS */
 .lirio {
