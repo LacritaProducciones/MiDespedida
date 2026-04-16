@@ -39,29 +39,23 @@ body {
 /* VIDEOS estilo polaroid */
 .videos {
     position: relative;
-    width: 250px;
-    height: 500px;
+    width: 260px;
+    height: 520px;
 }
 
-/* contenedor tipo polaroid */
+/* asegurar que no se tapen */
 .video-polaroid {
     position: absolute;
     width: 160px;
     background: white;
     padding: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
-.video-polaroid video {
-    width: 100%;
-    display: block;
-}
-
-/* posiciones inclinadas */
-.v1 { top: 0; left: 30px; transform: rotate(-8deg); }
-.v2 { top: 150px; left: 0; transform: rotate(6deg); }
-.v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
-
+.v1 { top: 0; left: 40px; transform: rotate(-8deg); z-index: 3; }
+.v2 { top: 170px; left: 0; transform: rotate(6deg); z-index: 2; }
+.v3 { top: 320px; left: 60px; transform: rotate(-5deg); z-index: 1; }
 /* CARTA */
 .carta {
     width: 600px;
