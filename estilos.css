@@ -36,35 +36,32 @@ body {
     padding: 40px;
 }
 
+
 /* VIDEOS estilo polaroid */
-/* CONTENEDOR VIDEOS */
 .videos {
     position: relative;
-    width: 220px;
+    width: 250px;
     height: 500px;
 }
 
-/* POLAROID VIDEO */
+/* contenedor tipo polaroid */
 .video-polaroid {
     position: absolute;
-    width: 140px; /* 🔥 tamaño controlado */
+    width: 160px;
     background: white;
-    padding: 8px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* VIDEO DENTRO (CLAVE DEL BUG) */
 .video-polaroid video {
     width: 100%;
-    height: 100px; /* 🔥 evita que se haga gigante */
-    object-fit: cover; /* recorta bonito */
     display: block;
 }
 
-/* POSICIONES BONITAS */
-.v1 { top: 0; left: 40px; transform: rotate(-8deg); }
+/* posiciones inclinadas */
+.v1 { top: 0; left: 30px; transform: rotate(-8deg); }
 .v2 { top: 150px; left: 0; transform: rotate(6deg); }
-.v3 { top: 300px; left: 50px; transform: rotate(-5deg); }
+.v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
 /* CARTA */
 .carta {
     width: 600px;
