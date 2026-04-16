@@ -53,8 +53,11 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
+/* 🔥 ARREGLO IMPORTANTE (para que no se hagan gigantes) */
 .video-polaroid video {
     width: 100%;
+    height: 100px;
+    object-fit: cover;
     display: block;
 }
 
@@ -62,6 +65,7 @@ body {
 .v1 { top: 0; left: 30px; transform: rotate(-8deg); }
 .v2 { top: 150px; left: 0; transform: rotate(6deg); }
 .v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
+
 /* CARTA */
 .carta {
     width: 600px;
