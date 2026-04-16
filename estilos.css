@@ -1,3 +1,121 @@
+body {
+    background: #f5f1e6;
+    font-family: 'Georgia', serif;
+    margin: 0;
+}
+
+/* INTRO */
+.intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    z-index: 9999;
+    animation: fadeOut 3s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* CONTENEDOR GENERAL */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* ========================= */
+/* 🎬 VIDEOS (IZQUIERDA) */
+/* ========================= */
+
+.videos {
+    position: relative;
+    width: 240px;
+    height: 520px;
+}
+
+.video-polaroid {
+    position: absolute;
+    width: 140px;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.video-polaroid video {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+}
+
+/* POSICIONES */
+.v1 { top: 0; left: 50px; transform: rotate(-8deg); }
+.v2 { top: 160px; left: 10px; transform: rotate(6deg); }
+.v3 { top: 320px; left: 70px; transform: rotate(-5deg); }
+
+/* ========================= */
+/* 📜 CARTA (CENTRO) */
+/* ========================= */
+
+.carta {
+    width: 600px;
+    background: #fffdf8;
+    padding: 50px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+.carta::before,
+.carta::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    border-left: 4px solid #6b1e1e;
+}
+
+.carta::before { left: 10px; }
+.carta::after { right: 10px; }
+
+h1 {
+    text-align: center;
+    color: #6b1e1e;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.firma {
+    text-align: right;
+}
+
+/* FLOR */
+.flor-centro {
+    width: 120px;
+    display: block;
+    margin: 30px auto;
+}
+
+/* ========================= */
+/* 📸 GALERIA (DERECHA) */
+/* ========================= */
+
 /* VIDEOS estilo polaroid */
 .videos {
     position: relative;
@@ -23,3 +141,46 @@
 .v1 { top: 0; left: 30px; transform: rotate(-8deg); }
 .v2 { top: 150px; left: 0; transform: rotate(6deg); }
 .v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
+/* ========================= */
+/* 💿 VINILO */
+/* ========================= */
+
+.vinilo {
+    position: absolute;
+    width: 100px;
+    bottom: -10px;
+    right: 10px;
+    animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ========================= */
+/* ⭐ ESTRELLAS (PEQUEÑAS) */
+/* ========================= */
+
+.estrella {
+    position: absolute;
+    width: 25px;
+}
+
+.estrella1 { top: 20px; right: 20px; }
+.estrella2 { bottom: 20px; left: 10px; }
+
+/* ========================= */
+/* 🌸 LIRIOS */
+/* ========================= */
+
+.lirio {
+    position: fixed;
+    width: 40px;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(100vh); }
+}
