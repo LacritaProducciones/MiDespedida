@@ -18,15 +18,19 @@ function crearLirio() {
 
 setInterval(crearLirio, 800);
 
-// 🔊 FORZAR MÚSICA (funciona siempre)
+// 🔊 ACTIVAR MUSICA (forma segura REAL)
 window.addEventListener("load", () => {
     const musica = document.getElementById("musica");
 
-    const intentar = () => {
+    function iniciarMusica() {
         musica.play().catch(() => {});
-    };
+        
+        // quitar eventos después de activar
+        document.removeEventListener("click", iniciarMusica);
+        document.removeEventListener("keydown", iniciarMusica);
+    }
 
-    intentar();
-
-    document.addEventListener("click", intentar);
+    // activar con cualquier interacción
+    document.addEventListener("click", iniciarMusica);
+    document.addEventListener("keydown", iniciarMusica);
 });
