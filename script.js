@@ -1,3 +1,37 @@
+// EFECTO ESCRITURA POR PÁRRAFOS (más limpio)
+function escribirParrafo(el, velocidad = 25) {
+    const texto = el.innerText;
+    el.innerText = "";
+    let i = 0;
+
+    function escribir() {
+        if (i < texto.length) {
+            el.innerText += texto[i];
+            i++;
+            setTimeout(escribir, velocidad);
+        }
+    }
+
+    escribir();
+}
+
+window.addEventListener("load", () => {
+    const parrafos = document.querySelectorAll(".texto");
+
+    let delay = 0;
+
+    parrafos.forEach((p) => {
+        const texto = p.innerText;
+
+        setTimeout(() => {
+            escribirParrafo(p, 20);
+        }, delay);
+
+        delay += texto.length * 20 + 500; // pausa entre párrafos
+    });
+});
+
+
 // LIRIOS
 function crearLirio() {
     const lirio = document.createElement("img");
