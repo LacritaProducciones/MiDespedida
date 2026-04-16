@@ -1,42 +1,3 @@
-body {
-    background: #f5f1e6;
-    font-family: 'Georgia', serif;
-    margin: 0;
-}
-
-/* INTRO */
-.intro {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    z-index: 9999;
-    animation: fadeOut 3s ease forwards;
-    animation-delay: 2s;
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-/* CONTENEDOR */
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 40px;
-}
-
-
 /* VIDEOS estilo polaroid */
 .videos {
     position: relative;
@@ -53,11 +14,8 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* 🔥 ARREGLO IMPORTANTE (para que no se hagan gigantes) */
 .video-polaroid video {
     width: 100%;
-    height: 100px;
-    object-fit: cover;
     display: block;
 }
 
@@ -65,88 +23,3 @@ body {
 .v1 { top: 0; left: 30px; transform: rotate(-8deg); }
 .v2 { top: 150px; left: 0; transform: rotate(6deg); }
 .v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
-
-/* CARTA */
-.carta {
-    width: 600px;
-    background: #fffdf8;
-    padding: 50px;
-    position: relative;
-}
-
-.carta::before,
-.carta::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    border-left: 4px solid #6b1e1e;
-}
-
-.carta::before { left: 10px; }
-.carta::after { right: 10px; }
-
-.flor-centro {
-    width: 120px;
-    display: block;
-    margin: auto;
-}
-
-/* GALERIA */
-.galeria {
-    position: relative;
-    width: 300px;
-    height: 500px;
-}
-
-.polaroid {
-    position: absolute;
-    width: 150px;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.polaroid img {
-    width: 100%;
-    display: block;
-}
-
-.img1 { top: 0; left: 50px; transform: rotate(-10deg); }
-.img2 { top: 150px; left: 0; transform: rotate(8deg); }
-.img3 { top: 220px; left: 120px; transform: rotate(-5deg); }
-
-/* VINILO */
-.vinilo {
-    position: absolute;
-    width: 100px;
-    bottom: -10px;
-    right: 10px;
-    animation: girar 4s linear infinite;
-}
-
-@keyframes girar {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* ESTRELLAS (CORREGIDO SOLO ESTO) */
-.estrella {
-    position: absolute;
-    width: 25px;
-}
-
-.estrella1 { top: 20px; right: 20px; }
-.estrella2 { bottom: 20px; left: 10px; }
-
-/* LIRIOS */
-.lirio {
-    position: fixed;
-    width: 40px;
-    animation: caer linear infinite;
-}
-
-@keyframes caer {
-    0% { transform: translateY(-100px); }
-    100% { transform: translateY(100vh); }
-}
