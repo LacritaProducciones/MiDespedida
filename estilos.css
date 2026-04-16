@@ -59,8 +59,7 @@ body {
 
 /* posiciones inclinadas */
 .v1 { top: 0; left: 30px; transform: rotate(-8deg); }
-.v2 { top: 150px; left: 0; transform: rotate(6deg); }
-.v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
+
 
 /* CARTA */
 .carta {
