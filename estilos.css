@@ -36,17 +36,31 @@ body {
     padding: 40px;
 }
 
-/* VIDEOS */
+/* VIDEOS estilo polaroid */
 .videos {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    position: relative;
+    width: 250px;
+    height: 500px;
 }
 
-.videos video {
-    width: 180px;
-    border-radius: 10px;
+/* contenedor tipo polaroid */
+.video-polaroid {
+    position: absolute;
+    width: 160px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
+.video-polaroid video {
+    width: 100%;
+    display: block;
+}
+
+/* posiciones inclinadas */
+.v1 { top: 0; left: 30px; transform: rotate(-8deg); }
+.v2 { top: 150px; left: 0; transform: rotate(6deg); }
+.v3 { top: 280px; left: 60px; transform: rotate(-5deg); }
 
 /* CARTA */
 .carta {
